@@ -1,0 +1,138 @@
+
+
+        /* MEDIA QUERIES MOBILE */
+
+@media screen and (max-width: 767px){
+     
+/*QUERIES INDEX*/
+
+    .grid-container-index{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas:"header"
+                            "foto"
+                            "texto"
+                            "footer";        
+    }    
+    
+    header{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        background-color: #200202;
+    }
+    .logo{
+        padding-bottom: 10px;
+    }
+    .articulo_index, .nav a{
+
+        font-size: 15px;
+    }
+    
+    footer{
+        background-color: #200202;
+        margin: auto;
+    }
+
+    .redes{
+        height: 30px;
+        width: 30px;
+    }
+    
+    .imagen_index{
+        display: flex;
+        justify-content: center;
+    }
+
+/*QUERIES DISCOGRAIA*/
+
+    .grid-container-discografia{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas: "header"
+                        "link1"
+                        "link2"
+                        "link3" 
+                        "link4"
+                        "foto"
+                        "footer";
+    background-color: black;
+    color: white;
+    gap: 40px;
+    }
+    .link_spotify1,.link_spotify2,.link_spotify3,.link_spotify4{    
+    font-size: 15px;
+    background-color: #200202;
+    margin-right: 20px;
+    }
+    .link_spotify2, .link_spotify4{
+        margin-left: 20px;
+    }
+    .imagen_discografia{
+        margin-left: 20px;
+    }
+}   
+            /* MEDIA QUERIES TABLET */
+
+@media screen and (min-width:768px) and (max-width: 1024px){
+      
+        /*QUERIES  INDEX */
+
+    /*  QUERIES DISCOGRAFIA*/
+    .grid-container-discografia{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas: "header header"
+                            "link1 link2"
+                            "link3 link4"
+                            "foto foto"
+                            "foto foto"
+                            "footer footer";
+        background-color: black;
+        color: white;
+        gap: 40px;
+    }
+
+    .nav ul li{
+        margin-right: 10px;
+    }
+    .articulo_index, .nav a{
+        font-size: 15px;
+    }
+    
+    .imagen_discografia img{
+        height: 350px;
+        margin-left: 10px;
+    }
+
+    .link_spotify2, .link_spotify4{
+        margin-right: 20px;
+    }
+    .redes{
+        height:50px;
+        width:50px;
+    }
+    
+}
+
+// imports base
+
+@import 'base/resets';
+
+// import ccomponents
+
+@import 'components/nabvar';
+@import 'components/footer';
+
+
+// imports layout
+
+@import 'layout/index';
+@import 'layout/discografia';
+@import 'layout/campeonatos';
+@import 'layout/galeria';
+@import 'layout/contacto';

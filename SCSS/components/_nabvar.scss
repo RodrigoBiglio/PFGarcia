@@ -1,0 +1,39 @@
+header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    padding: 10px 5px;
+    background-color:  #006847 ;      
+}
+
+.logo{
+    display: flex;   
+    img{
+        width: 50px;
+        height: 40px;
+        margin-right: 10px;
+        border: 1px solid rgb(255, 255, 255);    
+    }  
+    h1{
+        font-size: 40px;
+        margin-left: 30px;
+        color:rgb(255, 255, 255);
+    }
+}
+ 
+.nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+    a{ 
+        text-decoration: none; 
+        font-size: 20px;
+        color: white;
+    }
+    a:hover{
+        color: black;
+    }
+
+}
+
