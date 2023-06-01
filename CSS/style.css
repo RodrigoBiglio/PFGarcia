@@ -1,90 +1,3 @@
-/* MEDIA QUERIES MOBILE */
-@media screen and (max-width: 767px) {
-  /*QUERIES INDEX*/
-  .grid-container-index {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas: "header" "foto" "texto" "footer";
-  }
-  header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    background-color: #200202;
-  }
-  .logo {
-    padding-bottom: 10px;
-  }
-  .articulo_index, .nav a {
-    font-size: 15px;
-  }
-  footer {
-    background-color: #200202;
-    margin: auto;
-  }
-  .redes {
-    height: 30px;
-    width: 30px;
-  }
-  .imagen_index {
-    display: flex;
-    justify-content: center;
-  }
-  /*QUERIES DISCOGRAIA*/
-  .grid-container-discografia {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(7, auto);
-    grid-template-areas: "header" "link1" "link2" "link3" "link4" "foto" "footer";
-    background-color: black;
-    color: white;
-    gap: 40px;
-  }
-  .link_spotify1, .link_spotify2, .link_spotify3, .link_spotify4 {
-    font-size: 15px;
-    background-color: #200202;
-    margin-right: 20px;
-  }
-  .link_spotify2, .link_spotify4 {
-    margin-left: 20px;
-  }
-  .imagen_discografia {
-    margin-left: 20px;
-  }
-}
-/* MEDIA QUERIES TABLET */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  /*QUERIES  INDEX */
-  /*  QUERIES DISCOGRAFIA*/
-  .grid-container-discografia {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(6, auto);
-    grid-template-areas: "header header" "link1 link2" "link3 link4" "foto foto" "foto foto" "footer footer";
-    background-color: black;
-    color: white;
-    gap: 40px;
-  }
-  .nav ul li {
-    margin-right: 10px;
-  }
-  .articulo_index, .nav a {
-    font-size: 15px;
-  }
-  .imagen_discografia img {
-    height: 350px;
-    margin-left: 10px;
-  }
-  .link_spotify2, .link_spotify4 {
-    margin-right: 20px;
-  }
-  .redes {
-    height: 50px;
-    width: 50px;
-  }
-}
 * {
   margin: 0px;
   padding: 0px;
@@ -153,7 +66,87 @@ footer {
   padding: 10px 30px;
 }
 
-/* GRILLA INDEX*/
+@media screen and (max-width: 767px) {
+  .grid-container-index {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "header" "foto" "texto" "footer";
+  }
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    background-color: #200202;
+  }
+  .logo {
+    padding-bottom: 10px;
+  }
+  .articulo_index, .nav a {
+    font-size: 15px;
+  }
+  footer {
+    background-color: #200202;
+    margin: auto;
+  }
+  .redes {
+    height: 30px;
+    width: 30px;
+  }
+  .imagen_index {
+    display: flex;
+    justify-content: center;
+  }
+  /* media queries discografia mobile*/
+  .grid-container-discografia {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas: "header" "link1" "link2" "link3" "link4" "foto" "footer";
+    background-color: black;
+    gap: 40px;
+  }
+  .link_spotify1, .link_spotify2, .link_spotify3, .link_spotify4 {
+    font-size: 15px;
+    background-color: #200202;
+    margin-right: 20px;
+  }
+  .link_spotify2, .link_spotify4 {
+    margin-left: 20px;
+  }
+  .imagen_discografia {
+    margin-left: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /*FALTAN LAS MEDIA QUERIES DE INDEX (TABLET)*/
+  .grid-container-discografia {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: "header header" "link1 link2" "link3 link4" "foto foto" "foto foto" "footer footer";
+    background-color: black;
+    gap: 40px;
+  }
+  .nav ul li {
+    margin-right: 10px;
+  }
+  .articulo_index, .nav a {
+    font-size: 15px;
+  }
+  .imagen_discografia img {
+    height: 350px;
+    margin-left: 10px;
+  }
+  .link_spotify2, .link_spotify4 {
+    margin-right: 20px;
+  }
+  .redes {
+    height: 50px;
+    width: 50px;
+  }
+}
 .grid-container-index {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -161,7 +154,6 @@ footer {
   grid-template-areas: "header header" "foto texto" "footer footer";
 }
 
-/* ESTILO IMAGEN Y TEXTO INDEX*/
 .imagen_index {
   grid-area: foto;
   display: flex;
@@ -178,8 +170,11 @@ footer {
 
 .articulo_index {
   grid-area: texto;
-  font-size: 20px;
   margin: 50px;
+}
+.articulo_index p {
+  font-size: 20px;
+  padding-bottom: 10px;
 }
 
 /* GRID DISCOGRAFIA*/
@@ -284,7 +279,6 @@ footer {
   text-align: center;
 }
 
-/* GRID GALERIA */
 .grid-container-galeria {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -293,7 +287,6 @@ footer {
   gap: 40px;
 }
 
-/* ESTILO DE LOS TITULARES*/
 .titular_galeria_1 {
   grid-area: titulo;
   display: flex;
@@ -313,12 +306,11 @@ footer {
   align-items: center;
   font-size: 25px;
 }
-.titular_galeria_2 :hover {
+.titular_galeria_2:hover {
   color: #006847;
   font-size: 18px;
 }
 
-/* ESTILOS DE LAS IMAGENES Y VIDEOS */
 .galeria_img_1 {
   grid-area: img1;
   height: 300px;

@@ -1,23 +1,15 @@
-
-        /* GRILLA INDEX*/
-
 .grid-container-index{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
     grid-template-areas:"header header"
                         "foto texto"
-                        "footer footer";
-   
+                        "footer footer";  
 }
 
-
-     /* ESTILO IMAGEN Y TEXTO INDEX*/
-
-.imagen_index{
-    grid-area: foto;
-    display: flex;
-    
+.imagen_index {
+    grid-area:foto;
+    display:flex;
     div{
         display: flex;
         align-items: center;
@@ -26,13 +18,16 @@
             width: 80%;
             height: 100%;  
         }
-
-    }
-    
+    }   
 }
- 
+
 .articulo_index{
     grid-area: texto;
-    font-size: 20px;
     margin: 50px;
+    
+
+    p{
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
 }
