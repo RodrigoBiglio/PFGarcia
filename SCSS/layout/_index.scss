@@ -24,8 +24,9 @@
 .articulo_index{
     grid-area: texto;
     margin: 50px;
-    
-
+    .parrafo_verde{
+        color: $main-color;
+    }   
     p{
         font-size: 20px;
         padding-bottom: 10px;
