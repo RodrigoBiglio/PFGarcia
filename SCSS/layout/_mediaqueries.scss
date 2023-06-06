@@ -13,7 +13,7 @@
     header{
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
         text-align: center;
         background-color: $secondary-color;
     }
@@ -27,12 +27,6 @@
 
     footer{
         background-color: $secondary-color;
-        margin: auto;
-    }
-
-    .redes{
-        height: 30px;
-        width: 30px;
     }
 
     .imagen_index{

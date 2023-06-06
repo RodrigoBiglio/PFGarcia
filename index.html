@@ -12,50 +12,69 @@
 </head>
 <body class="grid-container-index">
     <header>
-        <div class="logo">
-            <img src="images/logoaczino.jfif" alt="logo">
-            <h1>ACZINO</h1>
-        </div> 
-        <div class="nav">
-            <ul>
-                <li>
-                    <a href="index.html">INICIO</a>
+      <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img class="logo" src="images/images.jfif" alt="logo de aczino">                
+        </a>
+          <h1> <span> A C </span>Z I<span> N O </span> </h1>            
+        <!--  casita redirecciona home  <a class="navbar-brand" href="index.html">
+          <i class="bi bi-house-door-fill"></i>
+        </a> -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Aczino Fan Page</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-cuWrrent="page" href="index.html"> <i class="bi bi-house-door-fill"></i>  Inicio</a>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-mic-fill"></i>  Carrera
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="pages/discografia.html">Discografia</a></li>
+                    <li><a class="dropdown-item" href="pages/campeonatos.html">Campeonatos</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="pages/galeria.html">Galeria</a></li>
+                  </ul>
                 </li>
-                <li>
-                    <a href="pages/discografia.html">DISCOGRAFIA</a>
-                </li>
-                <li>
-                    <a href="pages/campeonatos.html">CAMPEONATOS</a>
-                </li>
-                <li>
-                    <a href="pages/galeria.html">GALERIA</a>
-                </li>
-                <li>
-                    <a href="pages/contacto.html">CONTACTO</a>
-                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/contacto.html"> <i class="bi bi-person-lines-fill"></i>  Contacto</a>
+              </li>
+              
             </ul>
+            
+            </div>
+          </div>
         </div>
-    </header>
-    <section class="imagen_index">
-        <div>
-        <img src="images/aczino.png" alt="ACZINO">
-        </div>
-    </section>
-    <article class="articulo_index">
-        <p class="parrafo_verde">Mauricio Hernández González, mejor conocido como Aczino o Mau, es un rapero y freestyler procedente de la ciudad de Nezahualcóyotl 
-            ubicado en el país de México, siendo 4 veces campeón nacional de Red Bull, pues ganaría la Red Bull Nacional Colombia 2012 y la Red Bull nacional
-            México 2014, 2015 y 2017. También es el 1er tricampeón internacional de Red Bull, ganando la Red Bull Internacional 2017, 2021 y 2022.
+      </nav>
+  </header>
+    <article>
+      <div>
+        <p>Mauricio Hernández González, mejor conocido como Aczino, es un rapero y freestyler procedente de la ciudad de Nezahualcóyotl 
+            ubicado en el país de México, siendo 4 veces campeón nacional de Red Bull, Ganó la Red Bull Nacional Colombia 2012 y la Red Bull nacional
+            México 2014, 2015 y 2017. También es el 1er y único tricampeón internacional de Red Bull, ganando la Red Bull Internacional 2017, 2021 y 2022.
         </p> 
         <p>Aczino siempre dice que decidió dedicarse al rap improvisado en cuerpo y alma después de comprar un CD pirata con batallas de Zatu en 2005. Hasta entonces, había competido en skate (amateur) y le daba a los grafitis.Coincidiendo con el 15º aniversario del evento, Aczino consiguió lo que
             En 2008, con 17 años, se clasificó por primera vez para la Nacional de Red Bull en México. A partir de ahí, el mexicano arrasó en las competencias en las que participó tanto individuales como por parejas.
         </p>
-        <p class="parrafo_verde">Es considerado por muchos aficionados y especialistas como uno de los mejores freestylers de habla hispana en la historia, reconocido principalmente
+        <p>Es considerado por muchos aficionados y especialistas como uno de los mejores freestylers de habla hispana en la historia, reconocido principalmente
             por ganar muchas competencias, debido a su buen punchline y sus grandes respuestas, ya sean en competencias de freestyle o en torneos de batallas escritas.
         </p>
-
-        
-    </article>    
-    <footer>
+      </div>
+    </article>   
+    
+      <footer>
+        <i class="bi bi-arrow-right-circle"></i>
         <a href="https://www.tiktok.com/@aczino_oficial1?lang=es" target="_blank">
             <i class="bi bi-tiktok"></i>
         </a>
@@ -72,7 +91,7 @@
         <a href="https://open.spotify.com/artist/4r1ZDYKzPt3iIjuq8LbT6X" target="_blank">
             <i class="bi bi-spotify"></i>
         </a>
-    </footer>
+      </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>

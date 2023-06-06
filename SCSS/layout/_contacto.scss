@@ -1,9 +1,11 @@
 .grid-container-contactos{
     display: grid;
     grid-template-columns: repeat(1, auto);
-    grid-template-rows: repeat(3, 20%,auto 20%);
+    grid-template-rows: repeat(3, auto);
     grid-template-areas: "header""form""footer";
-    gap: 40px;
+    background-image: url("../images/banderamex.jfif");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .formularios_contacto{
@@ -22,30 +24,4 @@
         text-align: center;
         padding: 5px;
     }
-}
-
-
-form{
-    padding: 50px;
-    margin: 10px;
-    display: inline-block;
-    background-color:$main-color;
-    text-align: right;
-    justify-content: center;
-    border-radius: 10%;
-    transition: 2s;
-    &:hover{
-    
-        width: 600px;
-        height: 300px;
-        border-radius: 0;
-        border: 1px solid white;
-        color: white;
-        background-color: $secondary-color; 
-    }
-}
-.form input, .form label{
-    margin-bottom: 10px;
-    font-family: 'Times New Roman', Times, serif;
-
 }
