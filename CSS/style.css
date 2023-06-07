@@ -5,6 +5,7 @@
 body {
   background-color: black;
   color: white;
+  background-image: linear-gradient(90deg, rgba(0, 128, 0, 0.47), rgba(255, 255, 255, 0.493), rgba(255, 0, 0, 0.47));
 }
 
 header {
@@ -184,16 +185,18 @@ article div p {
   font-size: 23px;
   color: white;
   border-radius: 15px;
-  background-color: #006847;
+  background-color: red;
 }
 
 .link_spotify1 {
   grid-area: link1;
   margin-left: 20px;
+  margin-top: 80px;
 }
 
 .link_spotify2 {
   grid-area: link2;
+  margin-top: 80px;
 }
 
 .link_spotify3 {
@@ -208,6 +211,7 @@ article div p {
 .imagen_discografia {
   grid-area: foto;
   margin-right: 20px;
+  margin-top: 80px;
 }
 .imagen_discografia img {
   width: 100%;
@@ -261,109 +265,69 @@ article div p {
 
 .grid-container-galeria {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(7, auto);
-  grid-template-areas: "header header header" "titulo titulo titulo" "video1 video2 video3" "titulo2 titulo2 titulo2" "img1 img2 img3" "img4 img5 img6" "footer footer footer";
-  gap: 40px;
+  grid-template-areas: "header header header header" "titulo titulo titulo titulo" "titulo2 titulo2 titulo2 titulo2" "img1 img2 img3 img4" "img5 img6 img7 img8" "video1 video2 video3 video4" "footer footer footer footer";
+  gap: 15px;
 }
 
-.titular_galeria_1 {
-  grid-area: titulo;
+.img1, .img2, .img3, .img4, .img5, .img6, .img7, .img8 {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  font-size: 25px;
+  height: 300px;
+  width: 100%;
 }
-.titular_galeria_1 :hover {
-  color: #006847;
-  font-size: 18px;
+.img1 img, .img2 img, .img3 img, .img4 img, .img5 img, .img6 img, .img7 img, .img8 img {
+  width: 80%;
+  height: 80%;
+}
+.img1 p, .img2 p, .img3 p, .img4 p, .img5 p, .img6 p, .img7 p, .img8 p {
+  opacity: 0;
+}
+.img1:hover, .img2:hover, .img3:hover, .img4:hover, .img5:hover, .img6:hover, .img7:hover, .img8:hover {
+  transition: 2s;
+  transform: scale(1.2, 1.2);
+}
+.img1:hover p, .img2:hover p, .img3:hover p, .img4:hover p, .img5:hover p, .img6:hover p, .img7:hover p, .img8:hover p {
+  opacity: 1;
 }
 
-.titular_galeria_2 {
-  grid-area: titulo2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 25px;
-}
-.titular_galeria_2:hover {
-  color: #006847;
-  font-size: 18px;
-}
-
-.galeria_img_1 {
+.img1 {
   grid-area: img1;
-  height: 300px;
-  margin-left: 20px;
-}
-.galeria_img_1 img {
-  width: 100%;
-  height: 100%;
+  margin-top: 100px;
 }
 
-.galeria_img_2 {
+.img2 {
   grid-area: img2;
-  height: 300px;
-}
-.galeria_img_2 img {
-  width: 100%;
-  height: 100%;
+  margin-top: 100px;
 }
 
-.galeria_img_3 {
+.img3 {
   grid-area: img3;
-  height: 300px;
-  margin-right: 20px;
-}
-.galeria_img_3 img {
-  width: 100%;
-  height: 100%;
+  margin-top: 100px;
 }
 
-.galeria_img_4 {
+.img4 {
   grid-area: img4;
-  height: 300px;
-  margin-left: 20px;
-}
-.galeria_img_4 img {
-  width: 100%;
-  height: 100%;
+  margin-top: 100px;
 }
 
-.galeria_img_5 {
+.img5 {
   grid-area: img5;
-  height: 300px;
-}
-.galeria_img_5 img {
-  width: 100%;
-  height: 100%;
 }
 
-.galeria_img_6 {
+.img6 {
   grid-area: img6;
-  height: 300px;
-  margin-right: 20px;
-}
-.galeria_img_6 img {
-  width: 100%;
-  height: 100%;
 }
 
-.enlace_youtube1 {
-  grid-area: video1;
-  height: 300px;
-  margin-left: 20px;
+.img7 {
+  grid-area: img7;
 }
 
-.enlace_youtube2 {
-  grid-area: video2;
-  height: 300px;
-}
-
-.enlace_youtube3 {
-  grid-area: video3;
-  height: 300px;
-  margin-right: 20px;
+.img8 {
+  grid-area: img8;
 }
 
 .grid-container-contactos {
@@ -371,26 +335,31 @@ article div p {
   grid-template-columns: repeat(1, auto);
   grid-template-rows: repeat(3, auto);
   grid-template-areas: "header" "form" "footer";
-  background-image: url("../images/banderamex.jfif");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .formularios_contacto {
   grid-area: form;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
 }
 
 /* ESTILOS DEL FORMULARIO*/
 .caja-form {
   display: flex;
-  width: 100%;
+  width: 40%;
   height: 600px;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
 }
 .caja-form p, .caja-form h3 {
   text-align: center;
   padding: 5px;
+}
+
+.form {
+  display: flex;
+  justify-content: end;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -3,25 +3,31 @@
     grid-template-columns: repeat(1, auto);
     grid-template-rows: repeat(3, auto);
     grid-template-areas: "header""form""footer";
-    background-image: url("../images/banderamex.jfif");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .formularios_contacto{
-    grid-area: form;   
+    grid-area: form;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
 }
 
         /* ESTILOS DEL FORMULARIO*/
 
 .caja-form{
+    
     display: flex;
-    width: 100%;
+    width: 40%;
     height: 600px;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
+    
     p, h3{
         text-align: center;
         padding: 5px;
     }
+}
+.form{
+    display: flex;
+    justify-content: end;    
 }

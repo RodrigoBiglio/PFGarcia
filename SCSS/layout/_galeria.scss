@@ -1,104 +1,104 @@
 .grid-container-galeria{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(7,auto);
-    grid-template-areas: "header header header"
-                        "titulo titulo titulo"
-                        "video1 video2 video3"
-                        "titulo2 titulo2 titulo2"
-                        "img1 img2 img3"
-                        "img4 img5 img6"
-                        "footer footer footer";
-    gap: 40px;
+    grid-template-areas: "header header header header"
+                        "titulo titulo titulo titulo"
+                        "titulo2 titulo2 titulo2 titulo2"
+                        "img1 img2 img3 img4"
+                        "img5 img6 img7 img8"
+                        "video1 video2 video3 video4"
+                        "footer footer footer footer";
+    gap: 15px;
 } 
-          
-.titular_galeria_1{
-    grid-area: titulo;
+
+.img1,.img2,.img3,.img4,.img5,.img6,.img7,.img8{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
-    :hover{
-        color: $main-color;
-        font-size: 18px;
+    height: 300px;
+    width: 100%;
+    img{
+        width: 80%;
+        height: 80%;
     }
-}
-.titular_galeria_2{
-    grid-area: titulo2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
+    p{
+        opacity: 0;
+    }
     &:hover{
-        color:$main-color;
-        font-size: 18px;
-    }
-}      
-.galeria_img_1{
-    grid-area: img1;
-    height: 300px;
-    margin-left: 20px;
-    img{
-        width: 100%;
-        height: 100%;
-    }
-}
-.galeria_img_2{
-    grid-area: img2;
-    height: 300px;
-    img{
-        width: 100%;
-        height: 100%;
-    }
-}
-.galeria_img_3{
-    grid-area: img3;
-    height: 300px;
-    margin-right: 20px;
-    img{
-        width: 100%;
-        height: 100%;
-    }
-}
-.galeria_img_4{
-    grid-area: img4;
-    height: 300px;
-    margin-left: 20px;
-    img{
-        width: 100%;
-        height: 100%;
-    }
-}
-.galeria_img_5{
-    grid-area: img5;
-    height: 300px; 
-    img{
-        width: 100%;
-        height: 100%;
-    }
-}
-.galeria_img_6{
-    grid-area: img6;
-    height:300px;
-    margin-right: 20px;
-    img{
-        width: 100%;
-        height: 100%;
+        transition: 2s;
+        transform: scale(1.2,1.2);
+        p{
+            opacity: 1;
+        }
+                
     }
 }
 
-.enlace_youtube1{
-    grid-area: video1;
-    height: 300px;
-    margin-left: 20px;    
-}
-.enlace_youtube2{
-    grid-area: video2;
-    height: 300px;   
-}
-.enlace_youtube3{
-    grid-area: video3;
-    height: 300px;
-    margin-right: 20px; 
-}   
 
+    .img1{
+        grid-area: img1;
+        margin-top: 100px;
+    }
+    .img2{
+        grid-area: img2;
+        margin-top: 100px;
+    }
+    .img3{
+        grid-area: img3;
+        margin-top: 100px;
+    }
+    .img4{
+        grid-area: img4;
+        margin-top: 100px;
+    }
+    .img5{
+        grid-area: img5;
+    }
+    .img6{
+        grid-area: img6;
+    }
+    .img7{
+        grid-area: img7;
+    }
+    .img8{
+        grid-area: img8;
+    }
+
+// .titular_galeria_1{
+//     grid-area: titulo;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     font-size: 25px;
+//     :hover{
+//         color: $main-color;
+//         font-size: 18px;
+//     }
+// }
+// .titular_galeria_2{
+//     grid-area: titulo2;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     font-size: 25px;
+//     &:hover{
+//         color:$main-color;
+//         font-size: 18px;
+//     }
+// }      
+// .enlace_youtube1{
+//     grid-area: video1;
+//     height: 300px;
+//     margin-left: 20px;    
+// }
+// .enlace_youtube2{
+//     grid-area: video2;
+//     height: 300px;   
+// }
+// .enlace_youtube3{
+//     grid-area: video3;
+//     height: 300px;
+//     margin-right: 20px; 
+// }  
