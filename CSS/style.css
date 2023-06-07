@@ -172,7 +172,7 @@ article div p {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, auto, 1fr, 1fr, auto);
-  grid-template-areas: "header header header header" "link1 link2 foto foto" "link3 link4 foto foto" "footer footer footer footer";
+  grid-template-areas: "header header header header" "link1 link2 link3 link4" "link5 link5 link6 link7" "footer footer footer footer";
   gap: 40px;
 }
 
@@ -185,7 +185,6 @@ article div p {
   font-size: 23px;
   color: white;
   border-radius: 15px;
-  background-color: red;
 }
 
 .link_spotify1 {
@@ -206,6 +205,18 @@ article div p {
 
 .link_spotify4 {
   grid-area: link4;
+}
+
+.link_spotify5 {
+  grid-area: link5;
+}
+
+.link_spotify6 {
+  grid-area: link6;
+}
+
+.link_spotify7 {
+  grid-area: link7;
 }
 
 .imagen_discografia {
