@@ -8,27 +8,13 @@ footer{
         font-size: 30px;
         color:rgb(255, 255, 255);
     }
-
+    i:hover{
+        transition:  0.7s linear;
+        text-shadow: 0 0 10px white,0 0 20px white,0 0 40px white;
+    }
     /* texto con efecto brillante */
     p{    
         font-size: 20px;
         color:rgba(255, 0, 0, 0.84);
     }
-    p span{
-        transition:  0.7s linear;
-    }
-    p:hover:after{
-        content: "ASDASDASDASD";
-    }
-    p:hover span:nth-child(1){
-        margin-right:15px ;
-    }
-    p:hover span:nth-child(2){
-        margin-left: 15px;
-    }
-   p:hover span,p:hover{
-        color: white;
-        text-shadow: 0 0 10px white,0 0 20px white,0 0 40px white;
-    }
-
 }

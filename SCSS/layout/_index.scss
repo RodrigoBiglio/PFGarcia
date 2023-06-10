@@ -25,7 +25,20 @@ article{
             text-align: center;
             color: rgb(255, 255, 255);
             text-shadow:5px 5px 3px black ;
+            animation-name: animacion;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+            animation-duration: 2s;
         }
     }
 }
-
+@keyframes animacion{
+    0%{
+        transform: translatey(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translatey(0);
+        opacity: 1;
+    }
+}
