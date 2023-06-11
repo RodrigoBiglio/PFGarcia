@@ -4,13 +4,14 @@
     grid-template-rows: repeat(5, auto);
     grid-template-areas:"header"
                         "titular"
-                        "imagenes"                    
-                        "texto"
+                        "images"                    
+                        "tabla"
                         "footer";
     
 }
 
 .contenedor-carrusel{
+    grid-area: images;
     display: flex;
     justify-content: center;
     #carouselExampleAutoplaying{
@@ -23,35 +24,23 @@
 .titular_campeonatos{
     grid-area: titular;
     margin-top: 100px;
-    text-align: center;
     font-size: 60px;
-    color: red;  
+    text-align: center;
 }
-
     /* ESTILO DE LA TABLA*/
-    
-.tabla_campeonato{
-    grid-area: texto;
-    .box{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        .tabla{
-        display: flex;
-        border-collapse: collapse;
-            tr,td{
-                color: white;
-                border: 3px solid white;
-                padding: 0px 20px;
-                text-align: center;                
-                }
-        }
-    }
+
+table, th, td{
+    border: 2px solid rgb(2, 66, 7);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 3px 30px;
 
 }
-
-
-
-
-
+.tabla_campeonato{
+    grid-area: tabla;
+    display: flex;
+    justify-content: center;
+    div{
+        margin: 20px 0px;
+    }
+}

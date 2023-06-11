@@ -3,9 +3,8 @@
 .grid-container-discografia{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, auto, 1fr, 1fr,auto);
+    grid-template-rows: repeat(4, auto);
     grid-template-areas: "header header header header"
-                        ""
                         "link1 link5 link5 link4"
                         "link2 link3 link6 link7"
                         "footer footer footer footer";
@@ -19,10 +18,14 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    border-radius: 3% ;
     font-size: 20px;
-    color: rgb(2, 2, 2);
     box-shadow: 3px 3px 5px white;
     background-color: rgba(255, 255, 255, 0.274);
+    animation-name: asd;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration: 0.5s;
 }  
 .link_spotify1{
     grid-area: link1;
@@ -53,4 +56,15 @@
 .link_spotify7{
     grid-area:  link7;
     margin-right: 20px;
+}
+@keyframes asd{
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+
+    }
 }

@@ -2,7 +2,6 @@
 @import 'base/variables';
 @import 'base/resets';
 
-
 // import ccomponents
 
 @import 'components/nabvar';
@@ -11,10 +10,10 @@
 
 // imports layout
 
-@import 'layout/mediaqueries';
 @import 'layout/index';
 @import 'layout/discografia';
 @import 'layout/campeonatos';
 @import 'layout/galeria';
 @import 'layout/contacto';
+@import 'layout/mediaqueries';
 
