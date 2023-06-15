@@ -11,15 +11,16 @@ body {
 header {
   grid-area: header;
 }
-header h1 {
+header p {
+  font-size: 30px;
   padding: 0px 50px;
   text-shadow: 3px 3px 3px black;
   background-image: linear-gradient(45deg, rgba(0, 128, 0, 0.47), rgba(255, 255, 255, 0.493), rgba(255, 0, 0, 0.47));
 }
-header h1 span:nth-child(1) {
+header p span:nth-child(1) {
   color: rgb(4, 255, 0);
 }
-header h1 span:nth-child(2) {
+header p span:nth-child(2) {
   color: red;
 }
 header .logo {
@@ -47,16 +48,15 @@ footer i:hover {
 .grid-container-index {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(3, auto);
-  grid-template-areas: "header" "texto" "footer";
-  background-image: url("../images/fondoindex.jfif");
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "header" "title" "texto" "footer";
+  background: radial-gradient(rgba(200, 10, 10, 0.543), rgba(190, 32, 148, 0.749)), url("../images/fondoindex.jfif");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 article {
   grid-area: texto;
-  background-image: radial-gradient(rgba(200, 10, 10, 0.543), rgba(190, 32, 148, 0.749));
   display: flex;
   justify-content: center;
   align-items: end;
@@ -78,6 +78,13 @@ article div p {
   animation-duration: 2s;
 }
 
+.title {
+  grid-area: title;
+  margin-top: 120px;
+  text-align: center;
+  color: white;
+}
+
 @keyframes animacion {
   0% {
     transform: translatey(-100%);
@@ -92,19 +99,26 @@ article div p {
 .grid-container-discografia {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, auto);
-  grid-template-areas: "header header header header" "link1 link5 link5 link4" "link2 link3 link6 link7" "footer footer footer footer";
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas: "header header header header" "h1 h1 h1 h1" "link1 link5 link5 link4" "link2 link3 link6 link7" "footer footer footer footer";
   gap: 40px;
 }
 
+#title {
+  grid-area: h1;
+  text-align: center;
+  margin-top: 100px;
+}
+
 /* ESTILOS DE LOS LINKS A SPOTIFY E IMAGENES */
+/* ANIMACION DE LOS LINKS*/
 .link_spotify1, .link_spotify2, .link_spotify3, .link_spotify4, .link_spotify5, .link_spotify6, .link_spotify7 {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
   border-radius: 3%;
-  font-size: 20px;
+  font-size: 18px;
   box-shadow: 3px 3px 5px white;
   background-color: rgba(255, 255, 255, 0.274);
   animation-name: asd;
@@ -113,10 +127,10 @@ article div p {
   animation-duration: 0.5s;
 }
 
+/* POSICIONAMIENTO EN GRID*/
 .link_spotify1 {
   grid-area: link1;
   margin-left: 20px;
-  margin-top: 80px;
 }
 
 .link_spotify2 {
@@ -130,13 +144,11 @@ article div p {
 
 .link_spotify4 {
   grid-area: link4;
-  margin-top: 80px;
   margin-right: 20px;
 }
 
 .link_spotify5 {
   grid-area: link5;
-  margin-top: 80px;
 }
 
 .link_spotify6 {
@@ -218,13 +230,14 @@ table, th, td {
 .img1 img, .img2 img, .img3 img, .img4 img, .img5 img, .img6 img, .img7 img, .img8 img {
   width: 80%;
   height: 80%;
+  object-fit: cover;
 }
 .img1 p, .img2 p, .img3 p, .img4 p, .img5 p, .img6 p, .img7 p, .img8 p {
   opacity: 0;
 }
 .img1:hover, .img2:hover, .img3:hover, .img4:hover, .img5:hover, .img6:hover, .img7:hover, .img8:hover {
   transition: 2s;
-  transform: scale(1.2, 1.2);
+  transform: scale(1.1, 1.1);
 }
 .img1:hover p, .img2:hover p, .img3:hover p, .img4:hover p, .img5:hover p, .img6:hover p, .img7:hover p, .img8:hover p {
   opacity: 1;
@@ -262,22 +275,21 @@ table, th, td {
   grid-area: img8;
 }
 
-.titular_galeria_1 {
-  grid-area: titulo;
+.titular_galeria_1, .titular_galeria_2 {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 50px;
+  padding: 20px;
+}
+
+.titular_galeria_1 {
+  grid-area: titulo;
   margin-top: 100px;
 }
 
 .titular_galeria_2 {
   grid-area: titulo2;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  font-size: 50px;
 }
 
 .enlace_youtube1 {
@@ -347,15 +359,15 @@ table, th, td {
   .grid-container-discografia {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(9, auto);
-    grid-template-areas: "header" "link5" "link1" "link2" "link3" "link4" "link6" "link7" "footer";
+    grid-template-rows: repeat(10, auto);
+    grid-template-areas: "header" "h1" "link5" "link1" "link2" "link3" "link4" "link6" "link7" "footer";
     gap: 40px;
   }
   .link_spotify1, .link_spotify2, .link_spotify3, .link_spotify4, .link_spotify6, .link_spotify7 {
     margin: 0px 20px;
   }
   .link_spotify5 {
-    margin: 80px 20px;
+    margin: 0px 20px;
   }
   .grid-container-galeria {
     display: grid;
@@ -401,18 +413,18 @@ table, th, td {
   .grid-container-discografia {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(6, auto);
-    grid-template-areas: "header header" "link5 link5" "link1 link4" "link2 link7" "link3 link6" "footer footer";
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas: "header header" "h1 h1" "link5 link5" "link1 link4" "link2 link7" "link3 link6" "footer footer";
     gap: 20px;
+  }
+  .link_spotify5 {
+    margin: 0px 20px;
   }
   .link_spotify3 {
     margin-left: 20px;
   }
   .link_spotify6 {
     margin-right: 20px;
-  }
-  .link_spotify5 {
-    margin: 0px 20px;
   }
   /* MQ GALERIA*/
   .grid-container-galeria {
@@ -425,7 +437,7 @@ table, th, td {
   .enlace_youtube2 {
     margin: 0px 20px;
   }
-  /* campeonatos */
+  /*  MQ CAMPEONATOS */
   .contenedor-carrusel {
     display: flex;
     justify-content: center;

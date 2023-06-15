@@ -3,34 +3,41 @@
 .grid-container-discografia{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(5, auto);
     grid-template-areas: "header header header header"
+                        "h1 h1 h1 h1"
                         "link1 link5 link5 link4"
                         "link2 link3 link6 link7"
                         "footer footer footer footer";
     gap: 40px;
 }
- 
+
+#title{
+    grid-area: h1;
+    text-align: center;
+    margin-top: 100px;
+} 
         /* ESTILOS DE LOS LINKS A SPOTIFY E IMAGENES */
+        /* ANIMACION DE LOS LINKS*/
 
 .link_spotify1,.link_spotify2,.link_spotify3,.link_spotify4,.link_spotify5,.link_spotify6,.link_spotify7{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    border-radius: 3% ;
-    font-size: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+    border-radius: 3%;
+    font-size: 18px;
     box-shadow: 3px 3px 5px white;
     background-color: rgba(255, 255, 255, 0.274);
     animation-name: asd;
     animation-iteration-count: 1;
     animation-timing-function: linear;
     animation-duration: 0.5s;
-}  
+}
+    /* POSICIONAMIENTO EN GRID*/
 .link_spotify1{
     grid-area: link1;
-    margin-left: 20px;
-    margin-top: 80px;  
+    margin-left: 20px; 
 }
    
 .link_spotify2{
@@ -38,17 +45,14 @@
     margin-left: 20px;  
 }
 .link_spotify3{ 
-    grid-area: link3;
-     
+    grid-area: link3;     
 }
 .link_spotify4{
    grid-area: link4;
-   margin-top: 80px;
    margin-right: 20px; 
 }
 .link_spotify5{
     grid-area:  link5;
-    margin-top: 80px;
 }
 .link_spotify6{
     grid-area:  link6;
