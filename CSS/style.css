@@ -10,7 +10,8 @@ body {
 h1, h2 {
   color: white;
   font-size: 100px;
-  text-shadow: 0px 0px 10px black;
+  text-shadow: 5px 5px 10px black;
+  text-align: center;
 }
 
 header {
@@ -65,6 +66,7 @@ article {
   display: flex;
   justify-content: center;
   align-items: end;
+  flex-wrap: nowrap;
   height: 100vh;
 }
 article div {
@@ -75,7 +77,7 @@ article div p {
   margin-top: 20px;
   font-size: 19px;
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: white;
   text-shadow: 5px 5px 3px black;
   animation-name: animacion;
   animation-iteration-count: 1;
@@ -86,8 +88,7 @@ article div p {
 .title {
   grid-area: title;
   margin-top: 120px;
-  text-align: center;
-  color: white;
+  color: #200202;
 }
 
 @keyframes animacion {
@@ -111,7 +112,6 @@ article div p {
 
 #title {
   grid-area: h1;
-  text-align: center;
   margin-top: 100px;
 }
 
@@ -120,18 +120,33 @@ article div p {
 .link_spotify1, .link_spotify2, .link_spotify3, .link_spotify4, .link_spotify5, .link_spotify6, .link_spotify7 {
   display: flex;
   justify-content: center;
+  align-items: none;
   flex-wrap: wrap;
-  text-align: center;
   border-radius: 3%;
-  font-size: 18px;
   box-shadow: 3px 3px 5px white;
   background-color: rgba(255, 255, 255, 0.274);
-  animation-name: asd;
+  animation-name: aparicion;
   animation-iteration-count: 1;
   animation-timing-function: linear;
-  animation-duration: 0.5s;
+  animation-duration: 1s;
+}
+.link_spotify1 p, .link_spotify2 p, .link_spotify3 p, .link_spotify4 p, .link_spotify5 p, .link_spotify6 p, .link_spotify7 p {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-size: 18px;
+  color: rgb(37, 36, 36);
 }
 
+@keyframes aparicion {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 /* POSICIONAMIENTO EN GRID*/
 .link_spotify1 {
   grid-area: link1;
@@ -165,16 +180,6 @@ article div p {
   margin-right: 20px;
 }
 
-@keyframes asd {
-  0% {
-    opacity: 0;
-    transform: scale(0);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
 .grid-container-campeonatos {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -189,19 +194,17 @@ article div p {
 }
 .contenedor-carrusel #carouselExampleAutoplaying {
   width: 1000px;
-  object-fit: cover;
 }
 
 /* ESTILOS DEL TITULAR CAMPEONATOS*/
 .titular_campeonatos {
   grid-area: titular;
   margin-top: 100px;
-  font-size: 60px;
-  text-align: center;
 }
 
 /* ESTILO DE LA TABLA*/
 table, th, td {
+  background-color: black;
   border: 2px solid rgb(2, 66, 7);
   color: rgb(255, 255, 255);
   text-align: center;
@@ -227,9 +230,9 @@ table, th, td {
 
 .img1, .img2, .img3, .img4, .img5, .img6, .img7, .img8 {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   height: 300px;
   width: 100%;
 }
@@ -246,6 +249,8 @@ table, th, td {
   transform: scale(1.1, 1.1);
 }
 .img1:hover p, .img2:hover p, .img3:hover p, .img4:hover p, .img5:hover p, .img6:hover p, .img7:hover p, .img8:hover p {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: white;
   opacity: 1;
 }
 
@@ -285,7 +290,7 @@ table, th, td {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 50px;
+  flex-wrap: nowrap;
   padding: 20px;
 }
 
@@ -338,7 +343,7 @@ table, th, td {
   justify-content: end;
   align-items: center;
 }
-.caja-form p, .caja-form h1 {
+.caja-form p {
   text-align: center;
   padding: 5px;
   margin-bottom: 30px;
@@ -352,6 +357,9 @@ table, th, td {
 /* MEDIA QUERIES MOBILE   */
 @media screen and (max-width: 767px) {
   /* MQ INDEX*/
+  h1, h2 {
+    font-size: 40px;
+  }
   article div p {
     font-size: 14px;
   }
@@ -410,6 +418,9 @@ table, th, td {
 }
 /* MEDIA QUERIES TABLET */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+  h1, h2 {
+    font-size: 70px;
+  }
   /* MQ DE INDEX*/
   article div p {
     margin-top: 20px;

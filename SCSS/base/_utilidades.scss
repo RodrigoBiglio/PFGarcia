@@ -3,4 +3,9 @@
     height:$height;
     object-fit: $object;
 }
-// @mixin d-flex($justify, $aling)
+@mixin d-flex($justify, $aling, $warp){
+    display: flex;
+    justify-content: $justify;
+    align-items: $aling;
+    flex-wrap: $warp;
+}

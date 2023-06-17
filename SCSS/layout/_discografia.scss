@@ -14,25 +14,37 @@
 
 #title{
     grid-area: h1;
-    text-align: center;
     margin-top: 100px;
 } 
         /* ESTILOS DE LOS LINKS A SPOTIFY E IMAGENES */
         /* ANIMACION DE LOS LINKS*/
 
 .link_spotify1,.link_spotify2,.link_spotify3,.link_spotify4,.link_spotify5,.link_spotify6,.link_spotify7{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-    border-radius: 3%;
-    font-size: 18px;
+    @include d-flex(center, none, wrap);
+    border-radius: 3%; 
     box-shadow: 3px 3px 5px white;
     background-color: rgba(255, 255, 255, 0.274);
-    animation-name: asd;
+    animation-name: aparicion;
     animation-iteration-count: 1;
     animation-timing-function: linear;
-    animation-duration: 0.5s;
+    animation-duration: 1s;
+    p{
+        font-family: $font-card;
+        text-align: center;
+        font-size: 18px;
+        color: rgb(37, 36, 36);
+    }
+}
+@keyframes aparicion{
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+
+    }
 }
     /* POSICIONAMIENTO EN GRID*/
 .link_spotify1{
@@ -60,15 +72,4 @@
 .link_spotify7{
     grid-area:  link7;
     margin-right: 20px;
-}
-@keyframes asd{
-    0%{
-        opacity: 0;
-        transform: scale(0);
-    }
-    100%{
-        opacity: 1;
-        transform: scale(1);
-
-    }
 }

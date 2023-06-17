@@ -12,16 +12,11 @@
                         gap: 10px;      
 } 
 .img1,.img2,.img3,.img4,.img5,.img6,.img7,.img8{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:center;
-    align-items: center;
+    @include d-flex(center, center, wrap);
     height: 300px;
     width:  100%;
     img{
-        width: 80%;
-        height: 80%;
-        object-fit: cover;
+        @include images(80%,80%, cover)
     }
     p{
         opacity: 0;
@@ -30,6 +25,8 @@
         transition: 2s;
         transform: scale(1.1,1.1);
         p{
+            font-family: $font-card;
+            color: $text-color;
             opacity: 1;
         }            
     }
@@ -59,10 +56,7 @@
         grid-area: img8;
     }
     .titular_galeria_1, .titular_galeria_2{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 50px;
+        @include d-flex(center, center, nowrap);
         padding: 20px;
     }
 .titular_galeria_1{
