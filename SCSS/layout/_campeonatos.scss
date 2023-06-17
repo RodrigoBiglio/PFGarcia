@@ -15,7 +15,8 @@
     display: flex;
     justify-content: center;
     #carouselExampleAutoplaying{
-    width: 1000px;   
+    width: 1000px;
+    object-fit: cover;  
     }
 }
 

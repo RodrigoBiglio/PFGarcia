@@ -1,0 +1,6 @@
+@mixin images($width,$height,$object ){
+    width:$width;
+    height:$height;
+    object-fit: $object;
+}
+// @mixin d-flex($justify, $aling)
