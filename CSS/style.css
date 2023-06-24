@@ -340,7 +340,6 @@ table, th, td {
   display: flex;
   width: 40%;
   height: 600px;
-  justify-content: end;
   align-items: center;
 }
 .caja-form p {
@@ -351,7 +350,6 @@ table, th, td {
 .caja-form div {
   margin-bottom: 15px;
   display: flex;
-  justify-content: end;
 }
 
 /* MEDIA QUERIES MOBILE   */
@@ -396,15 +394,6 @@ table, th, td {
   .enlace_youtube3, .enlace_youtube2 {
     margin-left: 20px;
   }
-  /* MQ CONTACTOS*/
-  .formularios_contacto {
-    display: flex;
-    justify-content: end;
-    overflow: hidden;
-  }
-  .formularios_contacto h1, .formularios_contacto p {
-    font-size: 15px;
-  }
   .contenedor-carrusel {
     display: flex;
     justify-content: center;
@@ -414,6 +403,15 @@ table, th, td {
   }
   table, th, td {
     padding: 0px;
+  }
+  /* MQ CONTACTOS*/
+  .formularios_contacto p {
+    font-size: 15px;
+  }
+  .caja-form {
+    display: flex;
+    justify-content: center;
+    width: 70%;
   }
 }
 /* MEDIA QUERIES TABLET */

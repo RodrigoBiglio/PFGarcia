@@ -72,16 +72,6 @@
         margin-left: 20px;
     }
     
-    /* MQ CONTACTOS*/
-
-    .formularios_contacto{
-        display: flex;
-        justify-content: end;
-        overflow: hidden;
-        h1, p{ 
-            font-size: 15px;
-        }
-    }
     .contenedor-carrusel{
         display: flex;
         justify-content: center;
@@ -93,8 +83,20 @@
         padding: 0px;
     }
 
-}
 
+    /* MQ CONTACTOS*/
+
+    .formularios_contacto{
+        p{ 
+            font-size: 15px;
+        }
+    }
+    .caja-form{
+        display: flex;
+        justify-content: center;
+        width: 70%
+    }
+}
 /* MEDIA QUERIES TABLET */
 
 @media screen and (min-width:768px) and (max-width: 1024px){
@@ -171,3 +173,4 @@
         }
     }
 }
+
