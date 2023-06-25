@@ -56,7 +56,7 @@ footer i:hover {
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(4, auto);
   grid-template-areas: "header" "title" "texto" "footer";
-  background: radial-gradient(rgba(200, 10, 10, 0.543), rgba(190, 32, 148, 0.749)), url("../images/fondoindex.jfif");
+  background: radial-gradient(rgba(126, 6, 6, 0.543), rgba(121, 19, 94, 0.749)), url("../images/fondoindex.jfif");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -89,6 +89,7 @@ article div p {
   grid-area: title;
   margin-top: 120px;
   color: #200202;
+  text-shadow: 5px 5px 5px white;
 }
 
 @keyframes animacion {

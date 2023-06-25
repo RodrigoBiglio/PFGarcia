@@ -6,7 +6,7 @@
                         "title"                        
                         "texto"
                         "footer";
-                        background: radial-gradient(rgba(200, 10, 10, 0.543),rgba(190, 32, 148, 0.749)), url('../images/fondoindex.jfif');  
+                        background: radial-gradient(rgba(126, 6, 6, 0.543),rgba(121, 19, 94, 0.749)), url('../images/fondoindex.jfif');  
                         background-size: cover;
                         background-repeat: no-repeat;                       
 }                      
@@ -34,6 +34,7 @@ article{
     grid-area: title;
     margin-top: 120px;
     color: $secondary-color;
+    text-shadow: 5px 5px 5px white;
 }
 @keyframes animacion{
     0%{
