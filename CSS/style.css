@@ -343,6 +343,7 @@ table, th, td {
   align-items: center;
 }
 .caja-form p {
+  font-size: 20px;
   text-align: center;
   padding: 5px;
   margin-bottom: 30px;
@@ -352,7 +353,7 @@ table, th, td {
   display: flex;
 }
 
-/* MEDIA QUERIES MOBILE   */
+/* MEDIA QUERIES CELULAR*/
 @media screen and (max-width: 767px) {
   /* MQ INDEX*/
   h1, h2 {
